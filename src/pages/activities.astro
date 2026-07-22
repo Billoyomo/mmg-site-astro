@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import activities from "../data/activities.json";
+
+const years = [...new Set(activities.map((a) => a.year))].sort((a, b) => b - a);
+---
+
+<BaseLayout title="Activities">
+  <h1>Activities</h1>
+
+  {years.map((year) => (
+    <section>
+      <h2>{year}</h2>
+      <ul>
+        {activities
+          .filter((a) => a.year === year)
+          .map((a) => (
+            <li>
+              <span set:html={a.titleHtml} /> —{" "}
+              <a href={a.url} target="_blank" rel="noopener noreferrer">{a.url}</a>
+            </li>
+          ))}
+      </ul>
+    </section>
+  ))}
+</BaseLayout>

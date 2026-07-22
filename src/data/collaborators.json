@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Andrea Marini",
+    "photo": "/images/collaborators/AndreaMarini.jpeg",
+    "url": "https://flash-it.eu/about-us/andrea-marini/"
+  },
+  {
+    "name": "Renata Wentzcovitch",
+    "photo": "/images/collaborators/RenataWentzcovitch.jpeg",
+    "url": "https://www.apam.columbia.edu/faculty/renata-wentzcovitch"
+  },
+  {
+    "name": "Javier Junquera",
+    "photo": "/images/collaborators/JavierJunquera.jpeg",
+    "url": "https://personales.unican.es/junqueraj/"
+  },
+  {
+    "name": "Biplap Sinyal",
+    "photo": "/images/collaborators/BiplapSinyal.jpeg",
+    "url": "https://www.uu.se/en/contact-and-organisation/staff?query=N1-83"
+  },
+  {
+    "name": "James Sifuna",
+    "photo": "/images/collaborators/JamesSifuna.jpeg",
+    "url": "https://cuea.edu/Science/?personnel=dr-james-sifuna"
+  },
+  {
+    "name": "Victor Odari",
+    "photo": "/images/collaborators/VicOdari.jpeg",
+    "url": "https://www.mmust.ac.ke/staffprofiles/index.php/dr-benjamin-victor-odari"
+  },
+  {
+    "name": "Matteo Gatti",
+    "photo": "/images/collaborators/matteo_gatti.webp",
+    "url": "https://etsf.polytechnique.fr/People/Matteo"
+  },
+  {
+    "name": "Korir Kiptiemoi",
+    "photo": "/images/collaborators/KorirKiptiemoi.jpg",
+    "url": "http://profiles.mu.ac.ke/kiptiemoikorir/kiptiemoikorir"
+  }
+]

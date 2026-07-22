@@ -1,0 +1,37 @@
+---
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { href: "/research-themes", label: "Research Themes" },
+  { href: "/activities", label: "Activities" },
+  { href: "/publications", label: "Publications" },
+  { href: "/collaborators", label: "Collaborators" },
+  { href: "/news", label: "News" },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header>
+  <a href="/" class="brand">
+    <img src="/images/logos/mmg_official_logo.png" alt="Materials Modelling Group logo" width="40" height="40" />
+    <span>Materials Modelling Group</span>
+  </a>
+  <nav>
+    <ul>
+      {navLinks.map((link) => {
+        const isActive =
+          link.href === "/"
+            ? currentPath === "/"
+            : currentPath.startsWith(link.href);
+        return (
+          <li>
+            <a href={link.href} aria-current={isActive ? "page" : undefined}>
+              {link.label}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  </nav>
+</header>

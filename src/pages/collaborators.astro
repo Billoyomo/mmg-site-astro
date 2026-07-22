@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import collaborators from "../data/collaborators.json";
+---
+
+<BaseLayout title="Collaborators">
+  <h1>Collaborators</h1>
+  <p>
+    We would like to acknowledge the following people have been continuously supportive to the
+    Materials Modelling Group.
+  </p>
+
+  <h2>Our Collaborators</h2>
+  <ul>
+    {collaborators.map((person) => (
+      <li>
+        <img src={person.photo} alt={person.name} width="150" height="150" />
+        <p>
+          <a href={person.url} target="_blank" rel="noopener noreferrer">{person.name}</a>
+        </p>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>
