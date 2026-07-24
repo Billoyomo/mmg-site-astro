@@ -15,8 +15,15 @@ const { Content } = await render(post);
 ---
 
 <BaseLayout title={post.data.title}>
-  <h1>{post.data.title}</h1>
-  {post.data.subtitle && <p>{post.data.subtitle}</p>}
-  <p>{post.data.date.toDateString()}</p>
-  <Content />
+  <article class="post">
+    <!-- {post.data.excerptImage && (
+      <img class="post-banner" src={post.data.excerptImage} alt={post.data.title} />
+    )} -->
+    <h1>{post.data.title}</h1>
+    {post.data.subtitle && <p class="entry-subtitle">{post.data.subtitle}</p>}
+    <p class="entry-date">{post.data.date.toDateString()}</p>
+    <div class="post-content">
+      <Content />
+    </div>
+  </article>
 </BaseLayout>

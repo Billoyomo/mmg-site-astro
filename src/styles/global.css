@@ -146,6 +146,49 @@ main {
   word-break: break-word;
 }
 
+/* Append to global.css — supports excerptImage on news index + post pages */
+
+.entry-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.entry-card-body {
+  flex: 1;
+}
+
+.entry-image {
+  width: 140px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.entry-subtitle {
+  color: #555;
+  margin: 0.25rem 0;
+}
+
+.entry-date {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+}
+
+.post-banner {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.post-content {
+  margin-top: 1.5rem;
+}
+
 @media (max-width: 600px) {
   body { font-size: 16px; }
   h1 { font-size: 1.75rem; }

@@ -9,12 +9,17 @@ const posts = (await getCollection("news")).sort(
 
 <BaseLayout title="News">
   <h1>News</h1>
-  <ul>
+  <ul class="entry-list">
     {posts.map((post) => (
-      <li>
-        <a href={`/news/${post.id}`}>{post.data.title}</a>
-        {post.data.subtitle && <p>{post.data.subtitle}</p>}
-        <p>{post.data.date.toDateString()}</p>
+      <li class="entry-card">
+        {post.data.excerptImage && (
+          <img class="entry-image" src={post.data.excerptImage} alt={post.data.title} />
+        )}
+        <div class="entry-card-body">
+          <a class="entry-link" href={`/news/${post.id}`}>{post.data.title}</a>
+          {post.data.subtitle && <p class="entry-subtitle">{post.data.subtitle}</p>}
+          <p class="entry-date">{post.data.date.toDateString()}</p>
+        </div>
       </li>
     ))}
   </ul>
