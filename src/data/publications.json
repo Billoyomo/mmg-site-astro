@@ -5,14 +5,29 @@
     "url": "https://arxiv.org/abs/2601.05712"
   },
   {
+    "year": 2026,
+    "titleHtml": "OBELiX: a curated dataset of crystal structures and experimentally measured ionic conductivities for lithium solid-state electrolytes",
+    "url": "https://doi.org/10.1039/d5dd00441a"
+  },
+  {
+    "year": 2026,
+    "titleHtml": "Implementation of the hybrid exchange-correlation functionals in the SIESTA code",
+    "url": "https://doi.org/10.1016/j.cpc.2026.110086"
+  },
+  {
     "year": 2025,
     "titleHtml": "On the Automation of High Throughput Modeling of Adsorption In Porous Zeolitic Imidazolate Frameworks",
     "url": "https://arxiv.org/abs/2503.10535"
   },
   {
-    "year": 2024,
+    "year": 2025,
     "titleHtml": "Thermoelastic Properties Of The Ti<sub>2</sub>AlC MAX Phase: An <i>Ab Initio</i> Study",
-    "url": "https://arxiv.org/abs/2411.16649"
+    "url": "https://doi.org/10.1021/acs.jpcc.5c03598"
+  },
+  {
+    "year": 2025,
+    "titleHtml": "Strain dependence of the Bloch domain component in 180&deg; domains in bulk PbTiO<sub>3</sub> from first-principles",
+    "url": "https://doi.org/10.1063/5.0279988"
   },
   {
     "year": 2024,
@@ -31,12 +46,12 @@
   },
   {
     "year": 2022,
-    "titleHtml": "Low Born effective Charges, High Covalency and Strong Optical Activity in \\( X_{3}^{2+} Bi^{3-} N^{3-} \\) (X=Ca,Sr,Ba) <i>inverse</i>-perovskites",
+    "titleHtml": "Low Born effective Charges, High Covalency and Strong Optical Activity in X<sub>3</sub><sup>2+</sup> Bi<sup>3-</sup> N<sup>3-</sup> (X=Ca,Sr,Ba) <i>inverse</i>-perovskites",
     "url": "https://arxiv.org/abs/2203.00359"
   },
   {
     "year": 2021,
-    "titleHtml": "<i>ab initio</i> insights into Graphene-Zirconium disulfide/diselenide heterostructure as electrode material for alkali-ion batteries",
+    "titleHtml": "<i>Ab initio</i> insights into Graphene-Zirconium disulfide/diselenide heterostructure as electrode material for alkali-ion batteries",
     "url": "https://doi.org/10.1016/j.surfin.2021.101036"
   },
   {
