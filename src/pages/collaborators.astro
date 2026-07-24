@@ -11,9 +11,9 @@ import collaborators from "../data/collaborators.json";
   </p>
 
   <h2>Our Collaborators</h2>
-  <ul>
+  <ul class="grid collaborator-grid">
     {collaborators.map((person) => (
-      <li>
+      <li class="card collaborator-card">
         <img src={person.photo} alt={person.name} width="150" height="150" />
         <p>
           <a href={person.url} target="_blank" rel="noopener noreferrer">{person.name}</a>
@@ -22,3 +22,29 @@ import collaborators from "../data/collaborators.json";
     ))}
   </ul>
 </BaseLayout>
+
+<style>
+  .collaborator-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .collaborator-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .collaborator-card img {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: var(--space-xs);
+  }
+
+  .collaborator-card p {
+    margin: 0;
+    font-weight: 500;
+  }
+</style>

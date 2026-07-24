@@ -14,7 +14,7 @@ import team from "../data/team.json";
     <a href="https://www.quantum-espresso.org/" target="_blank" title="Quantum ESPRESSO">QE,</a>
     <a href="https://www.vasp.at/" target="_blank" title="Vienna Ab initio Simulation Package">VASP,</a>
     <a href="https://siesta-project.org/siesta/" target="_blank" title="Spanish Initiative for Electronic Simulations with Thousands of Atoms">SIESTA,</a>
-    <a href="https://abinit.github.io/abinit_web/" target="_blank">ABINIT</a> and
+    <a href="https://abinit.github.io/abinit_web/" target="_blank">ABINIT</a> and 
     <a href="https://www.yambo-code.eu/" target="_blank">YAMBO.</a>
     The Materials Modelling Group is composed of researchers with expertise in condensed matter
     physics and computational techniques. The team includes faculty members and graduate students,
@@ -22,12 +22,39 @@ import team from "../data/team.json";
   </p>
 
   <h2>Our Members</h2>
-  <ul>
+  <ul class="grid team-grid">
     {team.map((member) => (
-      <li>
+      <li class="card team-card">
         <img src={member.photo} alt={member.name} width="150" height="150" />
         <p>{member.name}</p>
       </li>
     ))}
   </ul>
 </BaseLayout>
+
+<style>
+  .team-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .team-card img {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: var(--space-xs);
+  }
+
+  .team-card p {
+    margin: 0;
+    font-weight: 500;
+    color: var(--text-strong);
+  }
+</style>

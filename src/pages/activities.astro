@@ -11,13 +11,13 @@ const years = [...new Set(activities.map((a) => a.year))].sort((a, b) => b - a);
   {years.map((year) => (
     <section>
       <h2>{year}</h2>
-      <ul>
+      <ul class="entry-list">
         {activities
           .filter((a) => a.year === year)
           .map((a) => (
-            <li>
-              <span set:html={a.titleHtml} /> —{" "}
-              <a href={a.url} target="_blank" rel="noopener noreferrer">{a.url}</a>
+            <li class="card entry-card">
+              <span set:html={a.titleHtml} />
+              <a class="entry-link" href={a.url} target="_blank" rel="noopener noreferrer">{a.url}</a>
             </li>
           ))}
       </ul>

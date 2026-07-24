@@ -1,6 +1,7 @@
 ---
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
+import '../styles/global.css';
 
 interface Props {
   title: string;
@@ -21,9 +22,9 @@ const { title, description = "Materials Modelling Group" } = Astro.props;
   </head>
   <body>
     <Nav />
-    <main>
-      <slot />
-    </main>
+    <main class="container">
+      <slot /> 
+    </main>      
     <Footer />
   </body>
 </html>
