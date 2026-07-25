@@ -1,6 +1,6 @@
 [
   { "name": "Prof. George Amolo", "photo": "/images/members/amolo-go-passport.jpg" },
-  { "name": "Dr. Mike Atambo", "photo": "/images/members/DrMikeAtambo.jpeg" },
+  { "name": "Dr. Mike Atambo","url": "https://mikeatm.github.io", "photo": "/images/members/DrMikeAtambo.jpeg" },
   { "name": "Dr. Robert Onyancha", "photo": "/images/members/DrRobertOnyancha.jpg" },
   { "name": "Dr. Mirriam Chepkoech", "photo": "/images/members/Lady.jpeg" },
   { "name": "Dr. Gladys King'ori", "photo": "/images/members/GladysKingori.jpeg" },

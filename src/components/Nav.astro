@@ -1,12 +1,14 @@
 ---
+const base = import.meta.env.BASE_URL;
+
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
-  { href: "/research-themes", label: "Research Themes" },
-  { href: "/activities", label: "Activities" },
-  { href: "/publications", label: "Publications" },
-  { href: "/collaborators", label: "Collaborators" },
-  { href: "/news", label: "News" },
+  { href: "", label: "Home" },
+  { href: "about", label: "About Us" },
+  { href: "research-themes", label: "Research Themes" },
+  { href: "activities", label: "Activities" },
+  { href: "publications", label: "Publications" },
+  { href: "collaborators", label: "Collaborators" },
+  { href: "news", label: "News" },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -14,8 +16,8 @@ const currentPath = Astro.url.pathname;
 
 <header>
   <div class="header-inner">
-    <a href="/" class="brand">
-      <img src="/images/logos/mmg_official_logo.png" alt="Materials Modelling Group logo" width="40" height="40" />
+    <a href={base} class="brand">
+      <img src={`${base}images/logos/mmg_official_logo.png`} alt="Materials Modelling Group logo" width="40" height="40" />
       <span>Materials Modelling Group</span>
     </a>
 
@@ -29,13 +31,14 @@ const currentPath = Astro.url.pathname;
     <nav>
       <ul>
         {navLinks.map((link) => {
+          const fullHref = `${base}${link.href}`;
           const isActive =
-            link.href === "/"
-              ? currentPath === "/"
-              : currentPath.startsWith(link.href);
+            link.href === ""
+              ? currentPath === base
+              : currentPath.startsWith(fullHref);
           return (
             <li>
-              <a href={link.href} aria-current={isActive ? "page" : undefined}>
+              <a href={fullHref} aria-current={isActive ? "page" : undefined}>
                 {link.label}
               </a>
             </li>

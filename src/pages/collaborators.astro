@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import collaborators from "../data/collaborators.json";
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Collaborators">
@@ -14,7 +16,7 @@ import collaborators from "../data/collaborators.json";
   <ul class="grid collaborator-grid">
     {collaborators.map((person) => (
       <li class="card collaborator-card">
-        <img src={person.photo} alt={person.name} width="150" height="150" />
+        <img src={`${base}${person.photo.replace(/^\//, "")}`} alt={person.name} width="150" height="150" />
         <p>
           <a href={person.url} target="_blank" rel="noopener noreferrer">{person.name}</a>
         </p>

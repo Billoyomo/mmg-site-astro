@@ -6,14 +6,18 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
-  image?: string;
+  image?: string; // path relative to base, no leading slash, e.g. "images/logos/mmg_official_logo.png"
 }
 
 const {
   title,
   description = "Materials Modelling Group",
-  image = "/images/logos/mmg_official_logo.png",
+  image = "images/logos/mmg_official_logo.png",
 } = Astro.props;
+
+const base = import.meta.env.BASE_URL;
+const absoluteImage = new URL(`${base}${image}`, Astro.site);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -22,11 +26,12 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/x-icon" href={`${base}favicon.ico`} />
+    <link rel="icon" type="image/png" sizes="32x32" href={`${base}favicon-32x32.png`} />
+    <link rel="icon" type="image/png" sizes="16x16" href={`${base}favicon-16x16.png`} />
+    <link rel="apple-touch-icon" sizes="180x180" href={`${base}apple-touch-icon.png`} />
+    <link rel="manifest" href={`${base}site.webmanifest`} />
+    <link rel="canonical" href={canonicalURL} />
 
     <meta name="description" content={description} />
     <title>{title} · Materials Modelling Group</title>
@@ -34,12 +39,13 @@ const {
     <meta property="og:type" content="website" />
     <meta property="og:title" content={`${title} · Materials Modelling Group`} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
+    <meta property="og:image" content={absoluteImage} />
+    <meta property="og:url" content={canonicalURL} />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={`${title} · Materials Modelling Group`} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={image} />
+    <meta name="twitter:image" content={absoluteImage} />
   </head>
   <body>
     <Nav />

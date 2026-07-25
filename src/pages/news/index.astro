@@ -2,6 +2,8 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
+const base = import.meta.env.BASE_URL;
+
 const posts = (await getCollection("news")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
@@ -11,12 +13,12 @@ const posts = (await getCollection("news")).sort(
   <h1>News</h1>
   <ul class="entry-list">
     {posts.map((post) => (
-      <li class="entry-card">
+      <li class="entry-card-news">
         {post.data.excerptImage && (
-          <img class="entry-image" src={post.data.excerptImage} alt={post.data.title} />
+          <img class="entry-image" src={`${base}${post.data.excerptImage.replace(/^\//, "")}`} alt={post.data.title} />
         )}
         <div class="entry-card-body">
-          <a class="entry-link" href={`/news/${post.id}`}>{post.data.title}</a>
+          <a class="entry-link" href={`${base}news/${post.id}`}>{post.data.title}</a>
           {post.data.subtitle && <p class="entry-subtitle">{post.data.subtitle}</p>}
           <p class="entry-date">{post.data.date.toDateString()}</p>
         </div>
